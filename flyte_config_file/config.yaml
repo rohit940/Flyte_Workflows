@@ -1,0 +1,23 @@
+admin:
+  # For GRPC endpoints you might want to use dns:///flyte.myexample.com
+  endpoint: dns:///18.207.164.136:31002
+  insecure: true
+
+
+    #storage:
+  # Backend for data storage (e.g., s3, filesystem)
+  # type: s3
+
+  # Configuration specific to S3 storage backend
+  # s3:
+    # AWS region where the S3 bucket is located
+    # region: us-east-1
+    # AWS S3 bucket name
+    # bucket: flyte-bucket-new 
+
+    # Optional: Prefix to prepend to all S3 keys (optional)
+    # prefix: your-prefix
+
+  
+    # Optional: Endpoint URL for custom S3-compatible storage providers
+    # endpoint_url: https://custom-s3-provider-url.com
