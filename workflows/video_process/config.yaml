@@ -1,0 +1,12 @@
+# config.yaml
+
+dockerImages:
+  primary_container_image: "rohit9988/k8sflyte:1"
+  source_container_image: "rohit9988/flytesource:1"
+  receiver_container_image: "rohit9988/flytereceiver:1"
+
+  
+s3_bucket:
+  bucket_name: "flyte-video-process"
+  input_folder_prefix: "data/input/"
+  tmp_file_key: "rohit_tmp_object.txt"
