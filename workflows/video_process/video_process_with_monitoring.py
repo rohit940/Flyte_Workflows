@@ -2,8 +2,7 @@ from datetime import timedelta
 from flytekit import Resources,dynamic,task, workflow,dynamic, LaunchPlan, FixedRate
 from flytekit.types.file import FlyteFile
 import yaml
-
-    
+  
 @task(requests=Resources(cpu="1", mem="1000Mi"), limits=Resources(cpu="1", mem="1000Mi"),
     container_image="rohit9988/flytek8sboto3:latest",
     )
@@ -116,5 +115,5 @@ fixed_rate_lp = LaunchPlan.get_or_create(
     name="monitoring_lp",
     workflow=monitoring_workflow_new_05,
     schedule=FixedRate(duration=timedelta(minutes=1)),
-    # fixed_inputs="config.yaml"
+    fixed_inputs={"config_file": "config.yaml"}
 )
