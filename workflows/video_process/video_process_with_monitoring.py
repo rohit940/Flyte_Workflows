@@ -86,7 +86,7 @@ def monitoring_task_new_05(config_file : FlyteFile):
                     video_name=new_object_name.split('/')[-1]
                     deployment_workflow(config_file=config_file,video_name=video_name)
         else:
-            print("No new files found")
+            print("No new files found here")
             return "No new files found"
         
         updated_objects=s3_client.list_objects_v2(Bucket=bucket_name, Prefix=folder_prefix)
