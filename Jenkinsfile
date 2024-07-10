@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("ls"){
             steps{
-                sh "cd workflows/CICD/ && pwd"
+                sh "cd workflows/CICD/ && pwd && pyflyte --config config.yml run --remote example.py wf"
             }
         }
     }
