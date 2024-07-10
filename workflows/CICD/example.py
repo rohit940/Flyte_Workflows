@@ -31,6 +31,4 @@ def wf(name: str = "world") -> typing.Tuple[str, int]:
 if __name__ == "__main__":
     # Execute the workflow by invoking it like a function and passing in
     # the necessary parameters
-    print(f"Running wf() {wf(name='passengers')}")
-~                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-~                                                             
+    print(f"Running wf() {wf(name='passengers')}")                                                             
