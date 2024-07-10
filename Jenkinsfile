@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage("ls"){
             steps{
-                sh "ls -lah"
+                sh "cd workflows/CICD/"
+                sh "pwd"
             }
         }
     }
