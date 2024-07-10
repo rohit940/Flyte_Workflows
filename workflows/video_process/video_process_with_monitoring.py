@@ -114,6 +114,6 @@ def deployment_workflow(config_file : FlyteFile, video_name : str):
 fixed_rate_lp = LaunchPlan.get_or_create(
     name="video_process_lp",
     workflow=monitoring_workflow_new_05,
-    # schedule=FixedRate(duration=timedelta(minutes=1)),
+    schedule=FixedRate(duration=timedelta(minutes=1)),
     fixed_inputs={"config_file": "workflows/video_process/config.yaml"}
 )
