@@ -1,10 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage("execute flyte workflow"){
+        stage("register flyte workflow"){
             steps{
-                sh "pyflyte --config workflows/CICD/config.yaml run --remote workflows/CICD/example.py wf"
-                sh "ls"
+                sh "pyflyte --config workflows/video_process/adminconfig.yaml run --remote workflows/video_process/video_process_with_monitoring.py --version ${BUILD_NUMBER}"
             }
         }
     }
