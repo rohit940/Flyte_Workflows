@@ -5,6 +5,7 @@ pipeline {
             steps{
                 sh "git clone https://github.com/rohit940/Flyte_Workflows.git"
                 sh "pyflyte --config Flyte_Workflows/workflows/video_process/adminconfig.yaml register Flyte_Workflows/workflows/video_process/video_process_with_monitoring.py --version ${BUILD_NUMBER}"
+            }
         }
         stage("register flyte workflow"){
             steps{
