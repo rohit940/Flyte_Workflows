@@ -115,5 +115,5 @@ fixed_rate_lp = LaunchPlan.get_or_create(
     name="vp_lp",
     workflow=monitoring_workflow_new_05,
     schedule=FixedRate(duration=timedelta(minutes=1)),
-    # fixed_inputs={"config_file": "config.yaml"}
+    fixed_inputs={"config_file": "config.yaml"}
 )
