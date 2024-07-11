@@ -2,7 +2,9 @@ pipeline {
     agent any
     stages {
         stage("git clone"){
-            sh "git clone https://github.com/rohit940/Flyte_Workflows.git"
+            steps{
+                sh "git clone https://github.com/rohit940/Flyte_Workflows.git"
+            }
         }
         stage("register flyte workflow"){
             steps{
