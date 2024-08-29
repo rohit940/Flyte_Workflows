@@ -1,0 +1,13 @@
+# Start with the lightweight Alpine image
+FROM alpine:3.18
+
+# Install Python 3 and pip
+RUN apk update && \
+    apk add --no-cache \
+    python3 \
+    py3-pip \
+    && python3 -m ensurepip \
+    && pip3 install --no-cache-dir --upgrade pip
+
+# Install Flytekit
+RUN pip3 install --no-cache-dir flytekit
